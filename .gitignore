@@ -1,3 +1,10 @@
+# Custom
+
+key.dat
+**/*.locked
+!TARGET/0ENCRYPTION_AREA.txt
+TARGET/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

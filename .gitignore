@@ -2,8 +2,9 @@
 
 key.dat
 **/*.locked
-!TARGET/0ENCRYPTION_AREA.txt
-TARGET/
+TARGET/*
+!TARGET/.AREA_FOR_ENCRYPTION
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -17,21 +17,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 EXCLUDED = [
-    os.path.join(BASE_DIR, 'TARGET', '0ENCRYPTION_AREA.txt'),
+    os.path.join(BASE_DIR, 'TARGET', '.AREA_FOR_ENCRYPTION'),
 ]
-
-def generate_key() -> bytes:
-    """key generation"""
-    key = Fernet.generate_key()
-    print(key)
-    return key
-
-
-def create_and_save_key():
-    """Save the key in binary file"""
-    key = generate_key()
-    with open('filekey.key', 'wb') as filekey:
-        filekey.write(key)
 
 
 class FakeRansomware:
@@ -112,3 +99,7 @@ if __name__ == '__main__':
 
     print(f'Decrypting files in {ransomware.target_dir}')
     ransomware.decrypt()
+
+    # # Pass a key as parameter
+    # my_key = b'3xmxI-fQu51kTX9aCHHIfeKHRlbl8iW4UEAkAHo8CSw='
+    # my_ransomware = FakeRansomware(key=my_key)
